@@ -1,0 +1,36 @@
+= Purpose
+
+Will add the autocomplete=off to every field tag to try to stop the
+browser from auto-completing your forms. Will also add it to the form
+tag.
+
+= Usage
+
+Add the following to your Gemfile
+
+    gem 'rack_no_autocomplete'
+
+Add it as middleware:
+
+    use Rack::NoAutocomplete
+
+= Future Directions
+
+Right now we globally disable the autocomplete feature. It might be
+nice to enable it for certain forms and disable it for others. The
+best way to do this would be to let the programmer establish a default
+behavior. Then allow an override in the form tag which will override
+this default.
+
+= Performance
+
+This gem uses rack_replace which basically just uses a gsub on the
+response stream. This make not be the most efficient method of doing
+this but it does work with any rack system and doesn't depend on hacking
+the ActionView Helpers. If you don't mind the fragileness and want a bit
+faster implementation take a look at the autocomplete-off gem.
+
+
+= Credit
+
+This gem was developed by Eric Anderson (http://pixelwareinc.com).
