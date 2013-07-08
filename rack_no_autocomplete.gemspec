@@ -1,14 +1,13 @@
 Gem::Specification.new do |s|
 
   s.name        = "rack_no_autocomplete"
-  s.version     = '0.0.1'
+  s.version     = '0.0.2'
   s.authors     = ['Eric Anderson']
   s.email       = ['eric@pixelwareinc.com']
 
   s.add_dependency 'rack'
   s.add_dependency 'rack_replace'
   s.add_development_dependency 'rake'
-  s.add_development_dependency 'debugger'
 
   s.files = Dir['lib/**/*.rb']
   s.extra_rdoc_files << 'README.rdoc'

@@ -4,7 +4,7 @@ module Rack
   class NoAutocomplete < Rack::Replace
 
     def initialize app
-      super app, /\<(form|input|textarea|select)/, '<\1 autocomplete="off"'
+      super app, /\<form/, '<form autocomplete="off"'
     end
 
   end
